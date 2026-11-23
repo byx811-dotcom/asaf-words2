@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>اختبار كلمات الانجليزي – عساف</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0f3057;--card:#16406f;--line:#5c9bd1;--tx:#eaf3fb;--mut:#9fc1de;--ac:#ffb703;--ok:#3ddc97;--no:#ff6b6b}
+*{box-sizing:border-box;margin:0;-webkit-tap-highlight-color:transparent}
+body{font-family:Tajawal,system-ui,sans-serif;background:var(--bg);color:var(--tx);min-height:100vh;background-image:linear-gradient(rgba(92,155,209,.13) 1px,transparent 1px),linear-gradient(90deg,rgba(92,155,209,.13) 1px,transparent 1px);background-size:28px 28px}
+#app{max-width:480px;margin:auto;padding:20px 16px 40px}
+h1{font-size:2.2rem;font-weight:800;color:var(--ac);line-height:1.3}
+h2{font-size:1.5rem;margin:8px 0 16px}
+.nm{font-size:3.6rem;font-weight:800;color:var(--tx);line-height:1.2;margin:4px 0 6px;text-shadow:0 0 18px rgba(255,183,3,.45)}
+.sub{color:var(--mut);margin:8px 0 18px;line-height:1.7}
+button{font-family:inherit;color:var(--tx);cursor:pointer}
+button:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
+.btn{display:block;width:100%;padding:14px;margin-bottom:10px;background:var(--card);border:2px solid var(--line);border-radius:10px;font-size:1.1rem;font-weight:700}
+.btn:disabled{opacity:.4}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+.st{padding:14px;background:var(--card);border:2px solid var(--line);border-radius:10px;text-align:right;display:flex;flex-direction:column;gap:4px}
+.st b{font-size:1.1rem}.st small{color:var(--mut)}.st em{font-style:normal;color:var(--ac);font-weight:700}
+.lock{opacity:.45;border-style:dashed;cursor:not-allowed}
+.back{background:none;border:none;color:var(--mut);font-size:1rem;padding:6px 0;margin-bottom:6px}
+.fc{width:100%;min-height:210px;background:var(--card);border:2px solid var(--ac);border-radius:14px;font-size:2.2rem;font-weight:800;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;margin-bottom:14px;padding:16px;text-align:center}
+.fc small{font-size:.9rem;font-weight:400;color:var(--mut)}
+.row{display:flex;gap:10px}.row .btn{flex:1}
+.ok{border-color:var(--ok)!important;background:rgba(61,220,151,.2)!important}
+.no{border-color:var(--no)!important;background:rgba(255,107,107,.2)!important}
+.top{display:flex;justify-content:space-between;color:var(--mut);margin-bottom:8px}
+.bar{height:8px;background:var(--card);border-radius:4px;overflow:hidden;margin-bottom:22px}
+.bar i{display:block;height:100%;width:100%;background:var(--ac)}
+.q{font-size:2.2rem;font-weight:800;text-align:center;margin-bottom:22px;min-height:60px}
+.mt{display:flex;gap:10px}.mt>div{flex:1}
+.m{font-size:1rem;padding:12px 6px}
+.sel{border-color:var(--ac)!important;background:rgba(255,183,3,.2)!important}
+.done{opacity:.3;pointer-events:none}
+.big{font-size:3.4rem;font-weight:800;color:var(--ac);text-align:center;margin:16px 0}
+footer{margin-top:24px;color:var(--mut);font-size:.9rem;text-align:center}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script>
+const RAW="101|inspect|يفحص / يفتش;102|fault|خطأ;103|error|خطأ;104|restrict|يقيد;105|place|يضع;106|barrier|حاجز;107|against|ضد;108|actor|ممثل;109|bust|إفلاس;110|marvelous|مدهش;111|repair|يصلح;112|remind|يذكر;113|curtains|ستائر;114|carpet|سجادة;115|almost|تقريبا;116|tailor|خياط / يخيط;117|join|ينضم;118|ordinary|عادي;119|expert|خبير;120|make up (his) mind|يقرر;121|perhaps|ربما;122|team|فريق;123|journey|رحلة;124|meal|وجبة;125|break|يندلع;126|assume|يفترض;127|manuscript|مخطوطة;128|experiment|تجربة;129|silence|صمت;130|novel|رواية;131|client|زبون;132|conclusion|استنتاج / ختام;133|truck|شاحنة;134|loan|قرض;135|traditional|تقليدي;136|sophisticated|متطور;137|dedicated (to)|مكرس ل;138|tractor|جرار;139|fertilizer|سماد;140|decorator|مصمم;142|electrician|عامل كهرباء;143|deep|عميق;144|hole|حفرة;145|habit|عادة;146|appearance|مظهر;147|fantasy|خيال;148|elder|أكبر سنا;149|artificial|اصطناعي;150|limbs|أطراف;151|cable|سلك;152|stage|منصة;153|run off|يهرب;154|shatter|يتحطم / يتهشم;155|turn|يتحول / يستدير;156|platform|رصيف;157|pocket|جيب;158|slip|ينزلق;159|step|يخطو;160|fence|سياج;161|mend|يصلح;162|paint|يدهن;163|afford|يتحمل (شراء);164|license|رخصة;165|glasses|نظارات;166|bill|فاتورة;167|tear-tore-torn|يمزق;168|fight|قتال;169|cook|طباخ;170|opportunity|فرصة;171|opinion|رأي;172|dinner|عشاء;173|restaurant|مطعم;174|serve|يخدم;175|access|وصول;176|agricultural|زراعي;177|facilitate|يسهل / ييسر;178|ministry|وزارة;179|crops|محاصيل;180|economy|اقتصاد;181|lorry|شاحنة;182|certificate|شهادة;183|issue|يصدر;184|export|يصدر;185|import|يستورد;186|vehicle|مركبة;187|pick-up|شاحنة صغيرة;188|council|مجلس;189|transport|نقل;190|alter|يعدل;191|amputate|يبتر;192|leg|ساق;194|bottom|قعر;195|current|حالي;196|event|حدث;197|break down|يتعطل;198|department|قسم;199|differentiate|يفرق;200|supply|يزود;201|type|نمط;202|nose|أنف";
+const W=RAW.split(";").map((s,i)=>{const p=s.split("|");return{id:i,no:p[0],e:p[1],a:p[2]}});
+const SZ=10,NS=Math.ceil(W.length/SZ);
+let S={best:{},wrong:[]},G={};
+try{const d=JSON.parse(localStorage.getItem("asaf2"));if(d)S=d}catch(e){}
+const save=()=>{try{localStorage.setItem("asaf2",JSON.stringify(S))}catch(e){}};
+const $=document.getElementById("app");
+const sh=a=>[...a].sort(()=>Math.random()-.5);
+const stage=n=>W.slice(n*SZ,n*SZ+SZ);
+const isOpen=n=>n==0||(S.best[n-1]||0)>=80;
+const foot="<footer>عساف</footer>";
+
+function home(){
+  clearInterval(G.tm);
+  let g="";
+  for(let n=0;n<NS;n++){
+    const o=isOpen(n),b=S.best[n],st=stage(n);
+    g+=`<button class="st ${o?"":"lock"}" ${o?`onclick="menu(${n})"`:"disabled"}><b>المرحلة ${n+1}</b><small dir="ltr">${st[0].no}–${st[st.length-1].no}</small><em>${o?(b!=null?b+"%":"جديدة"):"مقفلة"}</em></button>`;
+  }
+  $.innerHTML=`<h1>اختبار كلمات الانجليزي</h1><div class="nm">عساف</div><p class="sub">احفظ ${W.length} كلمة إنكليزية، عشر كلمات في كل مرحلة. تُفتح المرحلة التالية عندما تحصل على 80% في اختبار المرحلة.</p><div class="grid">${g}</div><button class="btn" onclick="review()">مراجعة أخطائي (${S.wrong.length})</button>${foot}`;
+}
+function menu(n){
+  clearInterval(G.tm);
+  $.innerHTML=`<button class="back" onclick="home()">رجوع</button><h2>المرحلة ${n+1}</h2><button class="btn" onclick="cards(${n})">بطاقات الحفظ</button><button class="btn" onclick="match(${n})">مطابقة</button><button class="btn" onclick="quiz(${n})">الاختبار</button>${foot}`;
+}
+function fin(t,big,txt,btns){
+  $.innerHTML=`<h2>${t}</h2><div class="big">${big}</div><p class="sub" style="text-align:center">${txt}</p>${btns}${foot}`;
+}
+
+/* بطاقات */
+function cards(n){G={n,q:sh(stage(n)),f:0};drawC()}
+function drawC(){
+  if(!G.q.length)return fin("أحسنت","✓","أنهيت كل بطاقات المرحلة.",`<button class="btn" onclick="cards(${G.n})">إعادة</button><button class="btn" onclick="menu(${G.n})">رجوع</button>`);
+  const w=G.q[0];
+  $.innerHTML=`<button class="back" onclick="menu(${G.n})">رجوع</button><p class="sub">المتبقي: ${G.q.length}</p><button class="fc" onclick="G.f=!G.f;drawC()">${G.f?`<span>${w.a}</span>`:`<span dir="ltr">${w.e}</span>`}<small>اضغط لقلب البطاقة</small></button><div class="row"><button class="btn no" onclick="cr(0)">لم أعرفها</button><button class="btn ok" onclick="cr(1)">عرفتها</button></div>`;
+}
+function cr(k){
+  const w=G.q.shift();
+  if(!k){G.q.push(w);if(!S.wrong.includes(w.id))S.wrong.push(w.id)}
+  G.f=0;save();drawC();
+}
+
+/* اختبار */
+function quiz(n,list){G={n,L:sh(list||stage(n)),i:0,s:0,rv:!!list};ask()}
+function ask(){
+  if(G.i>=G.L.length)return end();
+  const w=G.L[G.i];
+  const rev=Math.random()<.5&&W.filter(x=>x.a==w.a).length==1;
+  const ds=sh(W.filter(x=>x.id!=w.id&&x.a!=w.a)).slice(0,3);
+  const opts=sh([w,...ds]);
+  G.w=w;G.t=15;
+  $.innerHTML=`<div class="top"><span>${G.i+1}/${G.L.length}</span><span>النقاط ${G.s}</span></div><div class="bar"><i id="tb"></i></div><div class="q" ${rev?"":'dir="ltr"'}>${rev?w.a:w.e}</div>${opts.map(o=>`<button class="btn opt" data-i="${o.id}" ${rev?'dir="ltr"':""} onclick="pick(this,${o.id})">${rev?o.e:o.a}</button>`).join("")}`;
+  clearInterval(G.tm);
+  G.tm=setInterval(()=>{G.t-=.1;const b=document.getElementById("tb");if(b)b.style.width=(G.t/15*100)+"%";if(G.t<=0)pick(null,-1)},100);
+}
+function pick(b,id){
+  clearInterval(G.tm);
+  const w=G.w,ok=id==w.id;
+  document.querySelectorAll(".opt").forEach(x=>{x.disabled=true;if(+x.dataset.i==w.id)x.classList.add("ok");else if(x===b)x.classList.add("no")});
+  if(ok){G.s++;S.wrong=S.wrong.filter(x=>x!=w.id)}else if(!S.wrong.includes(w.id))S.wrong.push(w.id);
+  save();
+  setTimeout(()=>{G.i++;ask()},ok?600:1500);
+}
+function end(){
+  const p=Math.round(G.s/G.L.length*100);
+  let msg,btns;
+  if(G.rv){
+    msg=p>=80?"ممتاز، المراجعة ناجحة.":"استمر بالمراجعة حتى تثبت الكلمات.";
+    btns=`<button class="btn" onclick="review()">مراجعة أخرى</button><button class="btn" onclick="home()">الرئيسية</button>`;
+  }else{
+    S.best[G.n]=Math.max(S.best[G.n]||0,p);save();
+    msg=p>=80?(G.n<NS-1?"ممتاز! فُتحت المرحلة التالية.":"ممتاز! أنهيت كل المراحل."):"تحتاج إلى 80% لفتح المرحلة التالية. جرّب البطاقات ثم أعد الاختبار.";
+    btns=`<button class="btn" onclick="quiz(${G.n})">أعد الاختبار</button><button class="btn" onclick="home()">الرئيسية</button>`;
+  }
+  fin("النتيجة",p+"%",msg,btns);
+}
+function review(){
+  const L=S.wrong.slice(0,10).map(i=>W[i]);
+  if(!L.length)return fin("المراجعة","—","لا توجد كلمات خاطئة حالياً.",`<button class="btn" onclick="home()">الرئيسية</button>`);
+  quiz(-1,L);
+}
+
+/* مطابقة */
+function match(n){
+  const ws=sh(stage(n)).slice(0,6);
+  G={n,sel:null,left:ws.length,t0:Date.now()};
+  $.innerHTML=`<button class="back" onclick="menu(${n})">رجوع</button><p class="sub">اضغط كلمة ثم معناها.</p><div class="mt"><div>${sh(ws).map(w=>`<button class="btn m" dir="ltr" data-i="${w.id}" onclick="mp(this,'e')">${w.e}</button>`).join("")}</div><div>${sh(ws).map(w=>`<button class="btn m" data-i="${w.id}" onclick="mp(this,'a')">${w.a}</button>`).join("")}</div></div>`;
+}
+function mp(b,t){
+  if(!G.sel||G.sel.t==t){
+    if(G.sel)G.sel.b.classList.remove("sel");
+    G.sel={b,t};b.classList.add("sel");return;
+  }
+  const s=G.sel;G.sel=null;s.b.classList.remove("sel");
+  if(W[s.b.dataset.i].a==W[b.dataset.i].a){
+    [s.b,b].forEach(x=>x.classList.add("done"));
+    if(!--G.left)setTimeout(()=>fin("أحسنت","✓",`أنهيت المطابقة خلال ${Math.round((Date.now()-G.t0)/1000)} ثانية.`,`<button class="btn" onclick="match(${G.n})">جولة جديدة</button><button class="btn" onclick="menu(${G.n})">رجوع</button>`),400);
+  }else{
+    [s.b,b].forEach(x=>x.classList.add("no"));
+    setTimeout(()=>[s.b,b].forEach(x=>x.classList.remove("no")),500);
+  }
+}
+home();
+</script>
+</body>
+</html>
